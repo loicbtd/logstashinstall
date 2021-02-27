@@ -13,7 +13,7 @@ echo "NOTICE: navigate into logstash"
 cd logstash-7.11.0
 
 echo "NOTICE: create logstash config file"
-cat >> ./config/logstash.yml << EOF
+cat > ./config/logstash.yml << EOF
 # Chemin vers le dossier de data
 path.data: "./data2"
 
@@ -37,7 +37,7 @@ echo "NOTICE: create output and input folders"
 mkdir output input
 
 echo "MOTICE: create logstash conf for test"
-cat >> ./conf/test/logstash.conf << EOF
+cat > ./conf/test/logstash.conf << EOF
 input {
     stdin {
         type => stdin
